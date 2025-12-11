@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurono Design | Портфолио</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">Kurono<span>.design</span></a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Главная</a></li>
+                    <li><a href="#about" class="nav-link">Обо мне</a></li>
+                    <li><a href="#portfolio" class="nav-link">Портфолио</a></li>
+                    <li><a href="#contacts" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <img src="img/ava.jpg" alt="Kurono Avatar" class="hero-avatar">
+            
+            <h1>Привет, я <span class="accent-text">Николай</span></h1>
+            <h2>Digital Creator & 3D Artist</h2>
+            <p>Создаю уникальные визуальные миры и интерфейсы, которые запоминаются.</p>
+            <a href="#portfolio" class="btn">Смотреть работы</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Я начинающий дизайнер и 3D-художник, работающий под ником <strong>Kurono Design</strong>. 
+                        Моя страсть — это создание цифрового искусства, сочетающего в себе эстетику киберпанка и функциональность современного дизайна.
+                    </p>
+                    <p>
+                        В своей работе я использую современные инструменты моделирования и графического дизайна. 
+                        Я уделяю особое внимание композиции, освещению и деталям, чтобы каждый проект выглядел живым и завершенным.
+                        Всегда открыт к новым вызовам и интересным проектам.
+                    </p>
+                    
+                    <ul class="skills-list">
+                        <li>3D Modeling</li>
+                        <li>Graphic Design</li>
+                        <li>UI Concepts</li>
+                        <li>Rendering</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title">Мое Портфолио</h2>
+
+            <h3 class="subsection-title">Graphic Design</h3>
+            <div class="gallery-grid">
+                <div class="portfolio-item">
+                    <img src="img/work1.png" alt="Graphic Design Work 1">
+                    <div class="overlay">
+                        <span>Project: Altaris Mainnet</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/work2.png" alt="Graphic Design Work 2">
+                    <div class="overlay">
+                        <span>Project: Injective Staking</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/work3.png" alt="Graphic Design Work 3">
+                    <div class="overlay">
+                        <span>Project: Injective Venture Group</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">3D Artworks</h3>
+            <div class="gallery-grid">
+                <div class="portfolio-item">
+                    <img src="img/3dwork_1.png" alt="3D Work 1">
+                    <div class="overlay">
+                        <span>Concept: Cyber Car</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/3dwork_2.png" alt="3D Work 2">
+                    <div class="overlay">
+                        <span>Concept: Night Neon</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/3dwork_3.png" alt="3D Work 3">
+                    <div class="overlay">
+                        <span>Concept: Nature & Characters</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contacts" class="section">
+        <div class="container contact-wrapper">
+            
+            <div class="contact-info">
+                <h2 class="section-title">Контакты</h2>
+                <p>Готов обсудить ваш проект. Свяжитесь со мной любым удобным способом.</p>
+                
+                <div class="contact-links">
+                    <a href="mailto:gorbasos1@gmail.com" class="contact-link">
+                        📧 gorbasos1@gmail.com
+                    </a>
+                    <a href="tel:+79200860733" class="contact-link">
+                        📞 +7 920 086 07 33
+                    </a>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://t.me/kano0x" target="_blank" class="social-btn telegram">Telegram</a>
+                    <a href="https://github.com/bakumadarame" target="_blank" class="social-btn github">GitHub</a>
+                    <a href="https://vk.ru/" target="_blank" class="social-btn vk">VKontakte</a>
+                </div>
+            </div>
+
+            <form class="contact-form" action="#" method="POST">
+                <h3>Напишите мне</h3>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Ваш Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Сообщение" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">Отправить</button>
+            </form>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kurono Design. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
