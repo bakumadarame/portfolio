@@ -17,9 +17,9 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ВАЖНОЕ ИСПРАВЛЕНИЕ: Это спасет заголовки от перекрытия шапкой */
+
 section, .hero {
-    scroll-margin-top: 130px; /* Было 100, ставим 130 для надежности */
+    scroll-margin-top: 130px;
 }
 
 body {
@@ -45,7 +45,7 @@ ul {
     padding: 0 20px;
 }
 
-/* --- Шапка (Header) --- */
+
 .header {
     position: fixed;
     top: 0;
@@ -82,7 +82,7 @@ ul {
     color: var(--accent-color);
 }
 
-/* --- Секция Hero --- */
+
 .hero {
     height: 100vh;
     display: flex;
@@ -138,7 +138,7 @@ ul {
     transform: translateY(-2px);
 }
 
-/* --- Общие стили секций --- */
+
 .section {
     padding: 80px 0;
 }
@@ -336,9 +336,9 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45px;             /* Размер круга */
+    width: 45px;
     height: 45px;
-    background-color: #222;  /* Темный фон круга */
+    background-color: #222;
     border-radius: 50%;
     transition: all 0.3s ease;
     border: 1px solid transparent;
@@ -346,48 +346,48 @@ ul {
 
 /* Стили для самих SVG картинок внутри */
 .footer-icon img {
-    width: 22px;             /* Размер иконки внутри круга */
+    width: 22px;
     height: 22px;
     display: block;
     transition: transform 0.3s ease;
-    /* Этот фильтр делает иконки белыми, даже если svg черный */
+
     filter: brightness(0) invert(1); 
 }
 
 /* Эффекты при наведении */
 .footer-icon:hover {
-    background-color: var(--accent-color); /* Красный фон */
-    box-shadow: 0 0 15px rgba(255, 62, 62, 0.5); /* Свечение */
-    transform: translateY(-3px); /* Легкий подъем вверх */
+    background-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(255, 62, 62, 0.5);
+    transform: translateY(-3px);
 }
 
 /* Дополнительная анимация иконки при наведении */
 .footer-icon:hover img {
-    transform: scale(1.1); /* Иконка чуть увеличивается */
+    transform: scale(1.1);
 }
 
 /* --- Адаптивность (для мобильных) --- */
 @media (max-width: 768px) {
-    /* Настройки шапки для мобильных */
+
     .header {
-        padding: 10px 0; /* Делаем шапку уже по высоте */
+        padding: 10px 0;
     }
 
     .header-container {
         flex-direction: column;
-        gap: 10px; /* Уменьшаем расстояние между лого и меню */
+        gap: 10px;
     }
     
     .nav-list {
         gap: 15px;
         font-size: 14px;
-        flex-wrap: wrap; /* Если меню длинное, оно перенесется, а не сломает экран */
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     /* Настройки отступов контента */
     .hero {
-        padding-top: 140px; /* Больше отступ сверху для первой секции */
+        padding-top: 140px;
     }
 
     .hero h1 {
@@ -395,7 +395,7 @@ ul {
     }
 
     section, .hero {
-        scroll-margin-top: 220px; /* Было 160, ставим 220, чтобы точно хватило */
+        scroll-margin-top: 220px;
     }
 
     .contact-wrapper {
@@ -406,7 +406,7 @@ ul {
         grid-template-columns: 1fr;
     }
 
-    /* Адаптивность футера (если не было) */
+
     .footer-container-flex {
         flex-direction: column-reverse;
         gap: 20px;
@@ -432,6 +432,7 @@ ul {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 
 
 
