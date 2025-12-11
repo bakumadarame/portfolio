@@ -335,4 +335,24 @@ ul {
     .gallery-grid {
         grid-template-columns: 1fr;
     }
+
+}
+
+/* --- Стили для сообщения об успехе --- */
+.success-message {
+    background-color: rgba(30, 255, 255, 0.1);
+    border: 1px solid #00bcd4;
+    color: #00bcd4;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
