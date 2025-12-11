@@ -17,6 +17,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ВАЖНОЕ ИСПРАВЛЕНИЕ: Это спасет заголовки от перекрытия шапкой */
+section, .hero {
+    scroll-margin-top: 100px; /* Отступ при клике по меню на ПК */
+}
+
 body {
     font-family: var(--font-main);
     background-color: var(--bg-color);
@@ -361,29 +366,37 @@ ul {
     transform: scale(1.1); /* Иконка чуть увеличивается */
 }
 
-/* --- Адаптивность футера --- */
-@media (max-width: 768px) {
-    .footer-container-flex {
-        flex-direction: column-reverse;
-        gap: 20px;
-        text-align: center;
-    }
-}
-
 /* --- Адаптивность (для мобильных) --- */
 @media (max-width: 768px) {
+    /* Настройки шапки для мобильных */
+    .header {
+        padding: 10px 0; /* Делаем шапку уже по высоте */
+    }
+
     .header-container {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px; /* Уменьшаем расстояние между лого и меню */
     }
     
     .nav-list {
         gap: 15px;
         font-size: 14px;
+        flex-wrap: wrap; /* Если меню длинное, оно перенесется, а не сломает экран */
+        justify-content: center;
+    }
+
+    /* Настройки отступов контента */
+    .hero {
+        padding-top: 140px; /* Больше отступ сверху для первой секции */
     }
 
     .hero h1 {
         font-size: 32px;
+    }
+
+    /* Исправление перекрытия на мобилках (шапка там выше) */
+    section, .hero {
+        scroll-margin-top: 160px; /* Увеличиваем защитную зону для скролла */
     }
 
     .contact-wrapper {
@@ -394,6 +407,12 @@ ul {
         grid-template-columns: 1fr;
     }
 
+    /* Адаптивность футера (если не было) */
+    .footer-container-flex {
+        flex-direction: column-reverse;
+        gap: 20px;
+        text-align: center;
+    }
 }
 
 /* --- Стили для сообщения об успехе --- */
@@ -414,5 +433,6 @@ ul {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 
 
