@@ -306,15 +306,14 @@ ul {
 /* --- Футер --- */
 .footer {
     padding: 30px 0;
-    background-color: #050505; /* Чуть темнее основного фона */
+    background-color: #050505;
     border-top: 1px solid #222;
     color: #666;
 }
 
-/* Контейнер футера (Flexbox) */
 .footer-container-flex {
     display: flex;
-    justify-content: space-between; /* Текст слева, иконки справа */
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -322,38 +321,50 @@ ul {
     font-size: 14px;
 }
 
-/* Блок с иконками */
 .footer-socials {
     display: flex;
     gap: 15px;
 }
 
-/* Круглые кнопки-иконки */
+/* Круглые кнопки для иконок */
 .footer-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;       /* Ширина круга */
-    height: 40px;      /* Высота круга */
-    background-color: #222;
-    border-radius: 50%; /* Делаем круг */
-    color: #fff;
-    font-size: 12px;
-    font-weight: 800;
-    transition: 0.3s;
+    width: 45px;             /* Размер круга */
+    height: 45px;
+    background-color: #222;  /* Темный фон круга */
+    border-radius: 50%;
+    transition: all 0.3s ease;
     border: 1px solid transparent;
 }
 
-.footer-icon:hover {
-    background-color: var(--accent-color); /* Красный при наведении */
-    box-shadow: 0 0 10px rgba(255, 62, 62, 0.4);
-    transform: translateY(-3px); /* Подпрыгивание */
+/* Стили для самих SVG картинок внутри */
+.footer-icon img {
+    width: 22px;             /* Размер иконки внутри круга */
+    height: 22px;
+    display: block;
+    transition: transform 0.3s ease;
+    /* Этот фильтр делает иконки белыми, даже если svg черный */
+    filter: brightness(0) invert(1); 
 }
 
-/* --- Адаптивность футера (для мобильных) --- */
+/* Эффекты при наведении */
+.footer-icon:hover {
+    background-color: var(--accent-color); /* Красный фон */
+    box-shadow: 0 0 15px rgba(255, 62, 62, 0.5); /* Свечение */
+    transform: translateY(-3px); /* Легкий подъем вверх */
+}
+
+/* Дополнительная анимация иконки при наведении */
+.footer-icon:hover img {
+    transform: scale(1.1); /* Иконка чуть увеличивается */
+}
+
+/* --- Адаптивность футера --- */
 @media (max-width: 768px) {
     .footer-container-flex {
-        flex-direction: column-reverse; /* Сначала иконки, потом текст */
+        flex-direction: column-reverse;
         gap: 20px;
         text-align: center;
     }
@@ -403,4 +414,5 @@ ul {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 
