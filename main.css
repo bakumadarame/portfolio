@@ -305,11 +305,58 @@ ul {
 
 /* --- Футер --- */
 .footer {
-    padding: 20px 0;
-    text-align: center;
+    padding: 30px 0;
+    background-color: #050505; /* Чуть темнее основного фона */
     border-top: 1px solid #222;
-    font-size: 14px;
     color: #666;
+}
+
+/* Контейнер футера (Flexbox) */
+.footer-container-flex {
+    display: flex;
+    justify-content: space-between; /* Текст слева, иконки справа */
+    align-items: center;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+/* Блок с иконками */
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+/* Круглые кнопки-иконки */
+.footer-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;       /* Ширина круга */
+    height: 40px;      /* Высота круга */
+    background-color: #222;
+    border-radius: 50%; /* Делаем круг */
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.footer-icon:hover {
+    background-color: var(--accent-color); /* Красный при наведении */
+    box-shadow: 0 0 10px rgba(255, 62, 62, 0.4);
+    transform: translateY(-3px); /* Подпрыгивание */
+}
+
+/* --- Адаптивность футера (для мобильных) --- */
+@media (max-width: 768px) {
+    .footer-container-flex {
+        flex-direction: column-reverse; /* Сначала иконки, потом текст */
+        gap: 20px;
+        text-align: center;
+    }
 }
 
 /* --- Адаптивность (для мобильных) --- */
@@ -356,3 +403,4 @@ ul {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
